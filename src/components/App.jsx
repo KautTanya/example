@@ -14,9 +14,7 @@ export const App = () => {
       style={{
         margin: '0 auto',
         display: 'flex',
-        // justifyContent: 'space-between',
         width: '1200px',
-    
       }}
     >
       <div
@@ -26,21 +24,21 @@ export const App = () => {
           width: '600px',
       
         }}>
-      <ProfileCard
-      username={user.username}
-      tag={user.tag}
-      location={user.location}
-      avatar={user.avatar}
-      stats={user.stats}
-    />
+            <ProfileCard
+            username={user.username}
+            tag={user.tag}
+            location={user.location}
+            avatar={user.avatar}
+            stats={user.stats}
+          />
 
-    <StatisticsCard title="Upload stats" stats={data} />
-    <FriendList friends={friends} />
+          <StatisticsCard title="Upload stats" stats={data} />
+          <FriendList friends={friends} />
       </div>
  
     
     
-  <TransactionHistory items={transactions} />;
+  <TransactionHistory items={transactions} />
       
     </div>
     

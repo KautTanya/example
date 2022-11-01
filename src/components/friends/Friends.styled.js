@@ -16,8 +16,7 @@ display: flex;
 justify-content: center;
 background-color: #E4E5EA;
   align-items: center;
-  text-align: center;
-  font-size: 15px;
+  font-size: 20px;
   &:not(:last-child) {
     margin-bottom: 5px;
   }

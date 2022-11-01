@@ -62,12 +62,10 @@ export const StatsItem = styled.li`
 export const Quantity = styled.span`
     font-size: 20px;
     font-weight: 500;
-    // margin-top: 7px;
-    // margin-bottom: 5px;
+
 `;
 export const Label = styled.span`
     font-size: 20px;
     font-weight: 500;
-    // margin-top: 7px;
-    // margin-bottom: 5px;
+
 `;
