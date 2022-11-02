@@ -1,36 +1,26 @@
 import PropTypes from 'prop-types';
-import {FriendsList, Item, Status, Avatar, Name} from './Friends.styled';
+import {FriendsList} from './Friends.styled';
 
+import { FriendListItem } from 'components/friendsItem/FriendListItem';
 export const FriendList = ({friends}) => {
-    return(
-      <FriendsList>
-        {friends.map(friend =>{
-          return(
-            <Item key = {friend.id}>
-            <Status
-            style={{
-              backgroundColor: getBgColor(friend.isOnline),
-            }}>{friend.isOnline}</Status>
-            <Avatar src={friend.avatar} alt="User avatar" width="48" />
-            <Name>{friend.name}</Name>
-            </Item>
-          )
-        })}
-           
-      </FriendsList>
+  return(
+    <FriendsList>
+      {friends.map(({ avatar, name, isOnline, id }) =>{
+        return(
+          <FriendListItem
+          key={id}
+          avatar={avatar}
+          name={name}
+          isOnline={isOnline}
+        />
+        )
+      })}
+         
+    </FriendsList>
 
-    )
+  )
 };
-const getBgColor = isOnline => {
-  switch (isOnline) {
-    case true:
-      return 'green';
-    case false:
-      return 'red';
-    default:
-      return 'pink';
-  }
-};
+
 FriendList.propTypes = {
   friends: PropTypes.arrayOf(
     PropTypes.shape({
